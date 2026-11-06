@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geografiya Bilimdoni - Ulugbek.R</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🌍 GEOGRAFIYA BILIMDONI</h1>
+        <p>Bilimingizni sinab ko‘ring!</p>
+    </header>
+
+    <main class="card">
+
+        <section id="start-screen">
+            <div class="emoji">🌎</div>
+            <h2>Xush kelibsiz!</h2>
+            <p>Ismingizni kiriting va sayohatni boshlang.</p>
+
+            <input id="player-name"
+                   type="text"
+                   placeholder="Ismingizni kiriting..."
+                   maxlength="20">
+
+            <button onclick="startGame()">Boshlash 🚀</button>
+        </section>
+
+        <section id="game-screen" hidden>
+
+            <h3>Salom, <span id="display-name"></span>!</h3>
+
+            <div class="stats">
+                <span>⭐ Ball: <b id="score">0</b></span>
+                <span>❌ Xato: <b id="mistakes">0</b></span>
+            </div>
+
+            <div class="progress">
+                <div id="progress-bar"></div>
+            </div>
+
+            <p id="question-number"></p>
+
+            <div class="question-box">
+                <div id="question-icon">🌍</div>
+                <h2 id="question"></h2>
+            </div>
+
+            <div id="answers" class="answers"></div>
+
+            <p id="message"></p>
+
+            <button id="next-btn" disabled>
+                Keyingi savol →
+            </button>
+
+        </section>
+
+        <section id="result-screen" hidden>
+            <div class="emoji">🏆</div>
+            <h2>O‘yin tugadi!</h2>
+            <h3 id="result-name"></h3>
+            <h1 id="final-score"></h1>
+            <p id="final-message"></p>
+
+            <button onclick="restartGame()">🔄 Qayta o‘ynash</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Geografiya Bilimdoni</p>
+        <p class="creator">✍️ Ishlab chiqaruvchi: Ulug‘bek.R</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
